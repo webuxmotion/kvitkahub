@@ -8,6 +8,9 @@
         <a href="/flowers">КВІТИ</a>
       </li>
       <li>
+        <a href="/profile/add-product">Додати товар</a>
+      </li>
+      <li>
         <a href="/places">ТОЧКИ</a>
       </li>
     </ul>

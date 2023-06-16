@@ -18,8 +18,7 @@ class ListingFactory extends Factory
     {
         return [
             'name' => $this->faker->company(),
-            'price' => $this->faker->numberBetween(10, 2000),
-            'image' => "/images/product-1.png"
+            'price' => $this->faker->numberBetween(10, 2000)
         ];
     }
 }

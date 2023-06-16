@@ -1,4 +1,4 @@
-@props(['title', 'placeholder', 'name', 'value', 'hidden', 'withError'])
+@props(['type', 'min', 'title', 'placeholder', 'name', 'value', 'hidden', 'withError'])
 
 <div class="input">
   @unless(empty($title))
@@ -6,6 +6,12 @@
   @endunless
   <input
     id="{{$name}}"
+    @unless(empty($type))
+      type="{{$type}}"
+    @endunless
+    @unless(empty($min))
+      min="{{$min}}"
+    @endunless
     @unless(empty($name))
       name="{{$name}}"
     @endunless
@@ -14,6 +20,8 @@
     @endunless
     @unless(empty($value))
       value="{{$value}}"
+    @else
+      value="{{old($name)}}"
     @endunless
     @unless(empty($hidden))
       hidden

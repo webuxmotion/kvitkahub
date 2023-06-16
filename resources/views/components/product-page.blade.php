@@ -1,7 +1,9 @@
 @props(['listing'])
 
 @php
-  $imgSrc = $listing->image ?? '/images/flower-2.png';
+  $imgSrc = $listing->image
+    ? asset('/storage/' . $listing->image)
+    : asset('/images/flower-2.png');
 @endphp
 
 <div class="product-page">

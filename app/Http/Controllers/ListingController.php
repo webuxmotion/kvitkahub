@@ -22,7 +22,7 @@ class ListingController extends Controller
           ]);
     }
 
-    public function store(Request $request) {
+    public function storeOrder(Request $request) {
         $formFields = $request->validate([
             'name' => 'required',
             'contact' => 'required',
@@ -46,5 +46,27 @@ class ListingController extends Controller
                 'message-secondary', 
                 'Після обробки продавець напише вам щодо вашого замовлення.'
             );
+    }
+
+    public function create() {
+        return view('listings.create');
+    }
+
+    public function store(Request $request) {
+        $formFields = $request->validate([
+            'name' => 'required',
+            'price' => 'required'
+        ]);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('products', 'public');
+        }
+
+        $formFields['user_id'] = auth()->id() ?? 1;
+
+        Listing::create($formFields);
+
+        return redirect('/profile/flowers')
+            ->with('message', 'Товар успішно додано!');
     }
 }

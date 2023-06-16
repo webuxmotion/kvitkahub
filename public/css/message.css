@@ -1,0 +1,18 @@
+.message {
+  position: fixed;
+  top: 35px;
+  right: 120px;
+  left: 120px;
+  padding: 70px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.message__primary {
+  font-size: 30px;
+}
+
+.message__secondary {
+  font-size: 24px;
+}

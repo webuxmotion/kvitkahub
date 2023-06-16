@@ -8,5 +8,6 @@
 
 .product-card__image {
   padding-bottom: 100%;
-  background-size: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

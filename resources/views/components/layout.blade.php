@@ -8,6 +8,8 @@
 
         <link rel="icon" type="image/png" href="/favicon.png">
 
+        <script src="//unpkg.com/alpinejs" defer></script>
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +24,12 @@
         <link rel="stylesheet" href="/css/title.css">
         <link rel="stylesheet" href="/css/button.css">
         <link rel="stylesheet" href="/css/product-card.css">
+        <link rel="stylesheet" href="/css/product-page.css">
+        <link rel="stylesheet" href="/css/input.css">
+        <link rel="stylesheet" href="/css/message.css">
     </head>
     <body>
+      <x-message />
       <div class="layout">
         <div class="layout__header">
           <x-header />

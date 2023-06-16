@@ -1,0 +1,19 @@
+.product-page {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+
+.product-page__footer {
+  border: 1px solid var(--border-color);
+}
+
+.product-page__image {
+  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-page__column {
+  width: 50%;
+}

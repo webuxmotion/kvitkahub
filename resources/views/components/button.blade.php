@@ -10,8 +10,12 @@
     }
 @endphp
 
-@if($href)
+@if(!empty($href))
   <a href="{{$href}}" class="{{$className}}">
     {{$slot}}
   </a>
+@else
+  <button class="{{$className}}">
+    {{$slot}}
+  </button>
 @endif

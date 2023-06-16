@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Listing>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class ListingFactory extends Factory
+class OrderFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,9 @@ class ListingFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->company(),
             'price' => $this->faker->numberBetween(10, 2000),
+            'name' => $this->faker->company(),
+            'contact' => $this->faker->phoneNumber(),
             'image' => "/images/product-1.png"
         ];
     }

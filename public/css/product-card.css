@@ -1,0 +1,12 @@
+.product-card {
+
+}
+
+.product-card__footer {
+  border: 1px solid var(--border-color);
+}
+
+.product-card__image {
+  padding-bottom: 100%;
+  background-size: 50px;
+}

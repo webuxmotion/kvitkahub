@@ -8,3 +8,15 @@
 .layout__content {
   flex-grow: 1;
 }
+
+.layout__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.layout__product-card {
+  width: 33.33333%;
+  padding: 40px;
+  padding-bottom: 170px;
+}

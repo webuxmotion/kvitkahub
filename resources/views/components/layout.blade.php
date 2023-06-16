@@ -6,6 +6,8 @@
 
         <title>Kvitka Hub</title>
 
+        <link rel="icon" type="image/png" href="/favicon.png">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +19,9 @@
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/logo.css">
+        <link rel="stylesheet" href="/css/title.css">
         <link rel="stylesheet" href="/css/button.css">
+        <link rel="stylesheet" href="/css/product-card.css">
     </head>
     <body>
       <div class="layout">

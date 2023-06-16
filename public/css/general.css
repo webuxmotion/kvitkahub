@@ -7,4 +7,9 @@ body {
   --header-background: #ECECEC;
   --primary-color: #E94D2E;
   --primary-color-hover: #c7452b;
+  --border-color: #C6C6C6;
+}
+
+* {
+  box-sizing: border-box;
 }

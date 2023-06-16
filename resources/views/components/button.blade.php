@@ -1,9 +1,12 @@
-@props(['variant', 'href'])
+@props(['variant', 'href', 'fullWidth'])
 
 @php
     $className = "button";
     if ($variant ?? null) {
       $className .= " button--variant--" . $variant;
+    }
+    if ($fullWidth ?? null) {
+      $className .= " button--fullWidth";
     }
 @endphp
 

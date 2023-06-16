@@ -1,0 +1,23 @@
+.button {
+  font-size: 24px;
+  padding: 20px 60px;
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.button--variant--white {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.button--variant--white:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

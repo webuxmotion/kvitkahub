@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --header-background: #ECECEC;
+  --primary-color: #E94D2E;
+  --primary-color-hover: #c7452b;
+}

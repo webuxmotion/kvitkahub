@@ -1,0 +1,42 @@
+.hero {
+  text-align: center;
+  padding: 50px 27px;
+}
+
+.hero__img {
+  width: 150px;
+}
+
+.hero__inner {
+  padding: 40px;
+  position: relative;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  position: relative;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero a {
+  color: var(--primary-color);
+}
+.hero a:hover {
+  color: var(--primary-color-hover);
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 400;
+}

@@ -6,6 +6,7 @@ use App\Models\Listing;
 use App\Models\Order;
 use App\Models\Place;
 use Illuminate\Http\Request;
+use Image;
 
 class ListingController extends Controller
 {
@@ -89,7 +90,8 @@ class ListingController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('products', 'public');
+            $storedImage = $this->storeImage($request, 'image', 'products');
+            $formFields['image'] = $storedImage;
         }
 
         $formFields['user_id'] = auth()->id() ?? 1;
@@ -110,7 +112,9 @@ class ListingController extends Controller
         $formFields = $request->validate($validateFields);
 
         if ($request->hasFile('image')) {
-            $formFields['image'] = $request->file('image')->store('products', 'public');
+            $storedImage = $this->storeImage($request, 'image', 'products');
+            
+            $formFields['image'] = $storedImage;
         }
 
         $listing->update($formFields);

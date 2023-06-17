@@ -39,7 +39,8 @@ class PlaceController extends Controller
         $formFields = $request->validate($validateFields);
 
         if ($request->hasFile('map_image')) {
-            $formFields['map_image'] = $request->file('map_image')->store('places', 'public');
+            $storedImageName = $this->storeImage($request, 'map_image', 'places');
+            $formFields['map_image'] = $storedImageName;
         }
 
         $formFields['user_id'] = auth()->id() ?? 1;
@@ -63,7 +64,8 @@ class PlaceController extends Controller
         $formFields = $request->validate($validateFields);
 
         if ($request->hasFile('map_image')) {
-            $formFields['map_image'] = $request->file('map_image')->store('places', 'public');
+            $storedImageName = $this->storeImage($request, 'map_image', 'places');
+            $formFields['map_image'] = $storedImageName;
         }
 
         $place->update($formFields);

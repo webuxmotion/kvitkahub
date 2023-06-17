@@ -17,6 +17,7 @@ return new class extends Migration
                 ->constrained()
                 ->onDelete('cascade');
             $table->string('name');
+            $table->boolean('confirmed')->default(0);
             $table->string('contact_name');
             $table->string('phone');
             $table->string('address');

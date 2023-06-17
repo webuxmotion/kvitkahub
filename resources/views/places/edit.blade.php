@@ -6,6 +6,7 @@
 @endphp
 
 <x-layout>
+  <x-not-confirmed-message :place="$place" />
 
   <x-profile-nav />
 

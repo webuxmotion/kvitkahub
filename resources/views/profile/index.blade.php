@@ -1,4 +1,5 @@
 <x-layout>
+  <x-not-confirmed-message :place="$place" />
   <x-profile-nav />
   
   <x-button href="/profile/add-product">Додати товар</x-button>

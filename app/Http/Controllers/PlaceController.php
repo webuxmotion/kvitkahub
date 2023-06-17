@@ -10,11 +10,12 @@ class PlaceController extends Controller
     public function index() {
         return view('places.index', [
             'places' => Place::all()
+                ->where('confirmed', 1)
           ]);
     }
 
     public function edit() {
-        $place = Place::get()->where('user_id', '1')->first();
+        $place = Place::getUsersPlace();
 
         if ($place == null) {
             return view('places.create');

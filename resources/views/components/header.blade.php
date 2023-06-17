@@ -14,7 +14,10 @@
   </nav>
   <div>
     @auth
-    <x-button href="/profile" variant="white">Кабінет</x-button>
+      <x-logout-form>
+        <x-button variant="outline-dark">Вийти</x-button>
+      </x-logout-form>
+      <x-button href="/profile" variant="white">Кабінет</x-button>
     @else
       <x-button href="/login" variant="white">Вхід</x-button>
       <x-button href="/add-point">Додати точку</x-button>

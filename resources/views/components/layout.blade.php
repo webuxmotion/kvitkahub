@@ -27,14 +27,15 @@
         <link rel="stylesheet" href="/css/product-page.css">
         <link rel="stylesheet" href="/css/input.css">
         <link rel="stylesheet" href="/css/message.css">
+        <link rel="stylesheet" href="/css/profile-nav.css">
         <link rel="stylesheet" href="/css/profile-product-card.css">
     </head>
     <body>
-      <x-message />
       <div class="layout">
         <div class="layout__header">
           <x-header />
         </div>
+        <x-message />
         <div class="layout__content">
           {{$slot}}
         </div>

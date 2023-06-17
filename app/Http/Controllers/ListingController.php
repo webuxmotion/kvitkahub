@@ -12,8 +12,8 @@ class ListingController extends Controller
     // get n-count listings
     public function index() {
         return view('listings.index', [
-            'listings' => Listing::all()->take(3)
-          ]);
+            'listings' => Listing::getItems()->take(3)
+        ]);
     }
 
     public function addPoint() {
@@ -29,13 +29,13 @@ class ListingController extends Controller
             $place = Place::find($placeId);
 
             if ($place != null) {
-                $listing = Listing::all()
+                $listing = Listing::getItems()
                     ->where('user_id', $place->user_id);
             } else {
-                $listing = Listing::all();
+                $listing = Listing::getItems();
             }
         } else {
-            $listing = Listing::all();
+            $listing = Listing::getItems();
         }
 
 
@@ -45,7 +45,6 @@ class ListingController extends Controller
           ]);
     }
 
-    // get single listing
     public function show(Listing $listing) {
         $place = Place::all()
             ->where('user_id', $listing->user_id)

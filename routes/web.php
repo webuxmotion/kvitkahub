@@ -39,5 +39,6 @@ Route::post('/places', [PlaceController::class, 'store']);
 
 Route::get('/login', [UserController::class, 'login']);
 Route::get('/registration', [UserController::class, 'create']);
+Route::post('/logout', [UserController::class, 'logout']);
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::post('/users', [UserController::class, 'store']);

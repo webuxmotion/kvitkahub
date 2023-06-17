@@ -21,13 +21,25 @@ class DatabaseSeeder extends Seeder
             'name' => 'Andrii Pereverziev',
             'email' => 'pereverziev.test@gmail.com'
         ]);
+        $user2 = User::factory()->create([
+            'name' => 'Andrii Pereverziev',
+            'email' => 'test@gmail.com'
+        ]);
 
         Listing::factory(3)->create([
             'user_id' => $user->id
         ]);
 
+        Listing::factory(3)->create([
+            'user_id' => $user2->id
+        ]);
+
         Place::factory()->create([
             'user_id' => $user->id
+        ]);
+
+        Place::factory()->create([
+            'user_id' => $user2->id
         ]);
 
         Order::factory(4)->create([

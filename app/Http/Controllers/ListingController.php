@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Listing;
 use App\Models\Order;
+use App\Models\Place;
 use Illuminate\Http\Request;
 
 class ListingController extends Controller
@@ -11,15 +12,49 @@ class ListingController extends Controller
     // get n-count listings
     public function index() {
         return view('listings.index', [
-            'listings' => Listing::all()->take(6)
+            'listings' => Listing::all()->take(3)
+          ]);
+    }
+
+    public function addPoint() {
+        return view('listings.add-point');
+    }
+
+    public function all() {
+        $placeId = request('place');
+        $place = null;
+        $listing = null;
+
+        if ($placeId != null) {
+            $place = Place::find($placeId);
+
+            if ($place != null) {
+                $listing = Listing::all()
+                    ->where('user_id', $place->user_id);
+            } else {
+                $listing = Listing::all();
+            }
+        } else {
+            $listing = Listing::all();
+        }
+
+
+        return view('listings.all', [
+            'listings' => $listing,
+            'place' => $place
           ]);
     }
 
     // get single listing
     public function show(Listing $listing) {
+        $place = Place::all()
+            ->where('user_id', $listing->user_id)
+            ->first();
+
         return view('listings.show', [
-            'listing' => $listing
-          ]);
+            'listing' => $listing,
+            'place' => $place
+        ]);
     }
 
     public function storeOrder(Request $request) {

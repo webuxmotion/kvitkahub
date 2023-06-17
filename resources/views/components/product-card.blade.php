@@ -4,6 +4,13 @@
   $imgSrc = $listing->image
     ? asset('/storage/' . $listing->image)
     : asset('/images/flower-2.png');
+
+  $placeId = request()->place;
+  $href = "/flowers/{$listing->id}";
+  
+  if ($placeId != null) {
+    $href .= "?from=" . $placeId;
+  }
 @endphp
 
 <div class="product-card">
@@ -15,7 +22,7 @@
     <p>{{$listing->price}} <span>грн</span></p>
     
     <x-button 
-      href="/flowers/{{$listing->id}}"
+      href="{{$href}}"
       fullWidth
     >Деталі</x-button>
   </div>

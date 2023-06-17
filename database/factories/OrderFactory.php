@@ -20,7 +20,6 @@ class OrderFactory extends Factory
             'price' => $this->faker->numberBetween(10, 2000),
             'name' => $this->faker->company(),
             'contact' => $this->faker->phoneNumber(),
-            'image' => "/images/product-1.png"
         ];
     }
 }

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('address');
             $table->string('map_link');
-            $table->string('map_image');
+            $table->string('map_image')->nullable();
             $table->timestamps();
         });
     }

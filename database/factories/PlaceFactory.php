@@ -21,7 +21,6 @@ class PlaceFactory extends Factory
             'phone' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(),
             'map_link' => $this->faker->url(),
-            'map_image' => "/images/product-1.png",
             'contact_name' => $this->faker->firstName(),
         ];
     }

@@ -1,10 +1,18 @@
-@props(['listing'])
+@props(['listing', 'place'])
 
 @php
   $imgSrc = $listing->image
     ? asset('/storage/' . $listing->image)
     : asset('/images/flower-2.png');
+
+  $from = request()->from;
+  $backHref = "/flowers";
+  if ($from != null) {
+    $backHref .= "?place=" . $from;
+  }
 @endphp
+
+<a href="{{$backHref}}">Назад</a>
 
 <div class="product-page">
   <div class="product-page__column">
@@ -12,9 +20,10 @@
     <div class="product-page__image-wrapper">
       <div class="product-page__image" style="background-image: url('{{$imgSrc}}');"></div>
     </div>
-    <a href="/flowers?place=2">Дивитися всі квіти від Place 2</a>
+    <a href="/flowers?place={{$place->id}}">Дивитися всі квіти від {{$place->name}}</a>
   </div>
   <div class="product-page__column">
+    <x-place-info :place="$place" />
     <p>{{$listing->price}} <span>грн</span></p>
 
     <form method="POST" action="/order">

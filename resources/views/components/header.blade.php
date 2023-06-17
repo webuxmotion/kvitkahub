@@ -5,10 +5,7 @@
   <nav class="header__nav">
     <ul>
       <li>
-        <a href="/flowers">КВІТИ</a>
-      </li>
-      <li>
-        <a href="/profile/add-product">Додати товар</a>
+        <a href="/flowers">ВСІ КВІТИ</a>
       </li>
       <li>
         <a href="/places">ТОЧКИ</a>

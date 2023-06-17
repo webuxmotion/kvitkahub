@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="/css/product-page.css">
         <link rel="stylesheet" href="/css/input.css">
         <link rel="stylesheet" href="/css/message.css">
+        <link rel="stylesheet" href="/css/profile-product-card.css">
     </head>
     <body>
       <x-message />

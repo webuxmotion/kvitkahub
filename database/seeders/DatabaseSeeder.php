@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Listing;
 use App\Models\Order;
+use App\Models\Place;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Listing::factory(3)->create([
+            'user_id' => $user->id
+        ]);
+
+        Place::factory()->create([
             'user_id' => $user->id
         ]);
 

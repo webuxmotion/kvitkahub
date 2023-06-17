@@ -48,10 +48,6 @@ class ListingController extends Controller
             );
     }
 
-    public function create() {
-        return view('listings.create');
-    }
-
     public function store(Request $request) {
         $formFields = $request->validate([
             'name' => 'required',
@@ -68,5 +64,31 @@ class ListingController extends Controller
 
         return redirect('/profile/flowers')
             ->with('message', 'Товар успішно додано!');
+    }
+
+    public function update(Request $request, Listing $listing) {
+
+        $validateFields = [
+            'name' => 'required',
+            'price' => 'required'
+        ];
+
+        $formFields = $request->validate($validateFields);
+
+        if ($request->hasFile('image')) {
+            $formFields['image'] = $request->file('image')->store('products', 'public');
+        }
+
+        $listing->update($formFields);
+
+        return redirect('/profile')
+            ->with('message', 'Товар оновлено!');
+    }
+
+    public function destroy(Listing $listing) {
+        $listing->delete();
+
+        return redirect('/profile')
+            ->with('message', 'Товар видалено!');
     }
 }

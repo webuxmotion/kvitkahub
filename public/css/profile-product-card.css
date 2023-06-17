@@ -1,0 +1,22 @@
+.profile-product-card {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.profile-product-card__footer {
+  display: flex;
+  border: 1px solid var(--border-color);
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 24px;
+  padding-left: 40px;
+  border-left: none;
+}
+
+.profile-product-card__image {
+  width: 130px;
+  height: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

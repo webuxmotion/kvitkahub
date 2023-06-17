@@ -1,4 +1,7 @@
 <x-layout>
+
+  <x-profile-nav />
+  
   <x-title>Додавання товару</x-title>
 
   <form method="POST" action="/listings" enctype="multipart/form-data">

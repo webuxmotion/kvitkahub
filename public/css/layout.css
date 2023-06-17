@@ -20,3 +20,42 @@
   padding: 40px;
   padding-bottom: 170px;
 }
+
+.layout__form {
+  width: 540px;
+  padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+.layout__place-card {
+  width: 50%;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 170px;
+}
+
+.layout__section {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .layout__product-card {
+    width: 100%;
+    padding-bottom: 40px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .layout__place-card {
+    width: 100%;
+    padding-bottom: 50px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .layout__section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

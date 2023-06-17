@@ -14,9 +14,32 @@
   border-left: none;
 }
 
+.profile-product-card__footer h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .profile-product-card__image {
   width: 130px;
   height: 130px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.profile-product-card__price {
+  font-size: 40px;
+  margin: 0;
+}
+
+.profile-product-card__price span {
+  font-size: 24px;
+  margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .profile-product-card__footer {
+    flex-direction: column;
+    border: none;
+    padding: 0;
+  }
 }

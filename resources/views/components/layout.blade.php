@@ -29,6 +29,9 @@
         <link rel="stylesheet" href="/css/message.css">
         <link rel="stylesheet" href="/css/profile-nav.css">
         <link rel="stylesheet" href="/css/profile-product-card.css">
+        <link rel="stylesheet" href="/css/place-card.css">
+        <link rel="stylesheet" href="/css/place-info.css">
+        <link rel="stylesheet" href="/css/not-confirmed-message.css">
     </head>
     <body>
       <div class="layout">
@@ -43,5 +46,7 @@
           <x-footer />
         </div>
       </div>
+
+      <script src="/js/app.js"></script>
     </body>
 </html>

@@ -18,11 +18,12 @@
     <div class="product-card__image" style="background-image: url('{{$imgSrc}}');"></div>
   </div>
   <div class="product-card__footer">
-    <p>{{$listing->name}}</p>
-    <p>{{$listing->price}} <span>грн</span></p>
+    <p class="product-card__title">{{$listing->name}}</p>
+    <p class="product-card__price">{{$listing->price}} <span>грн</span></p>
     
     <x-button 
       href="{{$href}}"
+      variant="outline-dark"
       fullWidth
     >Деталі</x-button>
   </div>

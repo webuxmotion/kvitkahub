@@ -8,14 +8,18 @@
     if ($fullWidth ?? null) {
       $className .= " button--fullWidth";
     }
+
+    $attrs = $attributes->merge([
+      "class" => $className
+    ]);
 @endphp
 
 @if(!empty($href))
-  <a href="{{$href}}" class="{{$className}}">
+  <a href="{{$href}}" {{$attrs}}>
     {{$slot}}
   </a>
 @else
-  <button class="{{$className}}">
+  <button {{$attrs}}>
     {{$slot}}
   </button>
 @endif

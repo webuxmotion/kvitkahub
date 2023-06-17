@@ -40,3 +40,13 @@
   font-size: 40px;
   font-weight: 400;
 }
+
+@media screen and (max-width: 900px) {
+  .hero__content {
+    flex-direction: column;
+  }
+
+  .hero__img:first-child {
+    display: none;
+  }
+}

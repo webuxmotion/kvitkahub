@@ -2,9 +2,11 @@
   <x-not-confirmed-message :place="$place" />
   <x-profile-nav />
   
-  <x-button href="/profile/add-product">Додати товар</x-button>
+  <div class="layout__section">
+    <x-button href="/profile/add-product" class="mb-30">Додати товар</x-button>
 
-  @foreach ($listings as $listing)
-      <x-profile-product-card :listing="$listing" />
-  @endforeach
+    @foreach ($listings as $listing)
+        <x-profile-product-card :listing="$listing" />
+    @endforeach
+  </div>
 </x-layout>

@@ -1,0 +1,20 @@
+.place-info {
+
+}
+
+.place-info p {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.place-info p a {
+  color: black;
+}
+
+.place-info p a:hover {
+  color: var(--primary-color);
+}
+
+.place-info p span:first-child {
+  margin-right: 50px;
+}

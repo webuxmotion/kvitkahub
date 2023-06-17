@@ -7,9 +7,45 @@ body {
   --header-background: #ECECEC;
   --primary-color: #E94D2E;
   --primary-color-hover: #c7452b;
-  --border-color: #C6C6C6;
+  --border-color-light: #C6C6C6;
+  --border-color: #9E9E9E;
 }
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+p a, 
+h3 a {
+  color: var(--primary-color);
+}
+p a:hover, 
+h3 a:hover {
+  color: var(--primary-color-hover);
+}
+
+.g-text-center {
+  text-align: center;
+}
+
+.my-70 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }

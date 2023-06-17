@@ -11,8 +11,8 @@
     <div class="profile-product-card__image" style="background-image: url('{{$imgSrc}}');"></div>
   </div>
   <div class="profile-product-card__footer">
-    <p>{{$listing->name}}</p>
-    <p>{{$listing->price}} <span>грн</span></p>
+    <h3>{{$listing->name}}</h3>
+    <p class="profile-product-card__price">{{$listing->price}} <span>грн</span></p>
     
     <x-button 
       href="/profile/flowers/{{$listing->id}}"

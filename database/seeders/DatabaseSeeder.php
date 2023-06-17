@@ -35,11 +35,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Place::factory()->create([
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'confirmed' => 1
         ]);
 
         Place::factory()->create([
-            'user_id' => $user2->id
+            'user_id' => $user2->id,
+            'confirmed' => 1
         ]);
 
         Order::factory(4)->create([

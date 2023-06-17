@@ -10,6 +10,8 @@
   
   <x-title>Редагування товару</x-title>
 
+  <div class="layout__form mb-70">
+
   <form method="POST" action="/listings/{{$listing->id}}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
@@ -36,19 +38,28 @@
       type="file"
       name="image"
     />
-    <img src="{{$imgSrc}}" alt="image" width="200" />
+    <img src="{{$imgSrc}}" alt="image" width="200" class="mb-30" />
     
-    <x-button>
+    <x-button fullWidth>
       Зберегти
     </x-button>
 
   </form>
-  
-  <p>Видалення товару:</p>
+    <br/>
+    <br/>
+    <br/>
+    <h3 class="g-text-center">Видалення товару:</h3>
 
-    <form method="POST" action="/listings/{{$listing->id}}">
+    <form method="POST" action="/listings/{{$listing->id}}" class="js-delete-form">
       @csrf
       @method('DELETE')
-      <input type="submit" value="Видалити цей товар" />
+      <x-button 
+        variant="outline-dark" 
+        fullWidth
+        class="js-handle-delete"
+      >
+        Видалити цей товар
+      </x-button>
     </form>
+  </div>
 </x-layout>

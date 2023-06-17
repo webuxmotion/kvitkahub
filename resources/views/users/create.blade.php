@@ -5,42 +5,49 @@
     </h1>
   </x-hero>
 
-  <form method="POST" action="/users">
-    @csrf
+  <div class="layout__form">
 
-    <x-input
-      title="Email"
-      value="{{old('email')}}"
-      name="email"
-      type="email"
-      placeholder="Email"
-      withError
-    />
+    <form method="POST" action="/users">
+      @csrf
 
-    <x-input
-      title="Пароль"
-      value="{{old('password')}}"
-      name="password"
-      type="password"
-      placeholder="Пароль"
-      withError
-    />
+      <x-input
+        title="Email"
+        value="{{old('email')}}"
+        name="email"
+        type="email"
+        placeholder="Email"
+        withError
+      />
 
-    <x-input
-      title="Повторити пароль"
-      name="password_confirmation"
-      type="password"
-      placeholder="Повторити пароль"
-      withError
-    />
+      <x-input
+        title="Пароль"
+        value="{{old('password')}}"
+        name="password"
+        type="password"
+        placeholder="Пароль"
+        withError
+      />
 
-    <x-button>
-      Зареєструватись
-    </x-button>
+      <x-input
+        title="Повторити пароль"
+        name="password_confirmation"
+        type="password"
+        placeholder="Повторити пароль"
+        withError
+      />
 
-    <p>Якщо ви вже маєте акаунт продавця, 
-      тоді, <a href="/login">увійдіть на сайт </a></p>
-  </form>
+      <x-button fullWidth>
+        Зареєструватись
+      </x-button>
 
-  <p>Виникли проблеми? Телефонуте <a href="tel:+380951343338">(095)134-33-38</a></p>
+      <p>Якщо ви вже маєте акаунт продавця, 
+        тоді, <a href="/login">увійдіть на сайт </a></p>
+    </form>
+
+  </div>
+
+  <h3 class="g-text-center my-70">
+    Виникли проблеми? Телефонуте <a href="tel:+380951343338">(095)134-33-38</a>
+  </h3>
+  
 </x-layout>

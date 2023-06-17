@@ -12,15 +12,25 @@
   }
 @endphp
 
-<a href="{{$backHref}}">Назад</a>
+<div class="layout__section">
+  <h3>
+    <a href="{{$backHref}}"><<< Назад</a>
+  </h3>
+</div>
 
 <div class="product-page">
   <div class="product-page__column">
-    <p>{{$listing->name}}</p>
+    <h2 class="product-page__title">{{$listing->name}}</h2>
+    
     <div class="product-page__image-wrapper">
       <div class="product-page__image" style="background-image: url('{{$imgSrc}}');"></div>
     </div>
-    <a href="/flowers?place={{$place->id}}">Дивитися всі квіти від {{$place->name}}</a>
+
+    <p>
+      <a href="/flowers?place={{$place->id}}">
+        Дивитися всі квіти від {{$place->name}}
+      </a>
+    </p>
   </div>
   <div class="product-page__column">
     <x-place-info :place="$place" />

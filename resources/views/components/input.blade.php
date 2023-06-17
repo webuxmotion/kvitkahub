@@ -1,6 +1,8 @@
 @props(['type', 'min', 'title', 'placeholder', 'name', 'value', 'hidden', 'withError'])
 
+@unless(!empty($hidden)) 
 <div class="input">
+@endunless
   @unless(empty($title))
     <label for="{{$name}}">{{$title}}</label>
   @endunless
@@ -33,4 +35,6 @@
     @enderror
   @endunless
   
+@unless(!empty($hidden)) 
 </div>
+@endunless

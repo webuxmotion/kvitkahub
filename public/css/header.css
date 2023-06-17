@@ -3,6 +3,9 @@
   display: flex;
   align-items: center;
   padding-right: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  flex-wrap: wrap;
 }
 
 .header__logo {
@@ -34,4 +37,23 @@
 
 .header__nav ul li a:hover {
   color: var(--primary-color);
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .header .button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .header form {
+    width: 100%;
+  }
+  .header__nav {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }

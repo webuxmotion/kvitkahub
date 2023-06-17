@@ -3,6 +3,7 @@
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\PlaceController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,8 @@ Route::get('/profile/place', [PlaceController::class, 'edit']);
 Route::get('/places', [PlaceController::class, 'index']);
 Route::put('/places/{place}', [PlaceController::class, 'update']);
 Route::post('/places', [PlaceController::class, 'store']);
+
+Route::get('/login', [UserController::class, 'login']);
+Route::get('/registration', [UserController::class, 'create']);
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+Route::post('/users', [UserController::class, 'store']);

@@ -13,7 +13,11 @@
     </ul>
   </nav>
   <div>
-    <x-button href="/login" variant="white">Вхід</x-button>
-    <x-button href="/add-point">Додати точку</x-button>
+    @auth
+    <x-button href="/profile" variant="white">Кабінет</x-button>
+    @else
+      <x-button href="/login" variant="white">Вхід</x-button>
+      <x-button href="/add-point">Додати точку</x-button>
+    @endauth
   </div>
 </header>

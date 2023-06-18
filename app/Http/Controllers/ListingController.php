@@ -70,7 +70,27 @@ class ListingController extends Controller
             $formFields['image'] = $request->image;
         }
 
+        $place = Place::get()
+            ->where('user_id', $request->user_id)
+            ->first();
+        $telegram_id = $place->telegram_id;
+
         Order::create($formFields);
+
+        if ($telegram_id != null) {
+
+            TelegramController::sendPhoto(
+                $telegram_id,
+                public_path('/storage/' . $request->image),
+                $request->price . 'грн, ' . $request->name . 
+                '. Точка: ' . $place->name .
+                '. Contact: '
+            );
+            TelegramController::sendMessage(
+                $telegram_id,
+                $request->contact
+            );
+        }
 
         return back()
             ->with(

@@ -68,6 +68,10 @@ class PlaceController extends Controller
             $formFields['map_image'] = $storedImageName;
         }
 
+        if ($request->telegram_id != null) {
+            $formFields['telegram_id'] = $request->telegram_id;
+        }
+
         $place->update($formFields);
 
         return redirect('/profile/place')

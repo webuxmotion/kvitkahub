@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('address');
             $table->string('map_link');
             $table->string('map_image')->nullable();
+            $table->string('telegram_id')->nullable();
             $table->timestamps();
         });
     }

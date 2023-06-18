@@ -63,6 +63,14 @@
       />
       <img src="{{$imgSrc}}" alt="image" width="200" class="mb-30" />
       
+      <x-input
+        title="Telegram /id"
+        value="{{$place->telegram_id}}"
+        name="telegram_id"
+        placeholder="999999999"
+        withError
+      />
+
       <x-button fullWidth>
         Зберегти
       </x-button>

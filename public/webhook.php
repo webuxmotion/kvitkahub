@@ -16,7 +16,7 @@ $name = $result["message"]["from"]["username"]; // ім'я користувач�
  
 if ($text) {
     if ($text == "/start") {
-        $reply = "Hi!" . $chat_id;
+        $reply = "Привіт). Щоб подивитися чат id, напишіть: /id";
         $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $reply]);
     }
     

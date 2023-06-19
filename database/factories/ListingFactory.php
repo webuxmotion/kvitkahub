@@ -18,7 +18,7 @@ class ListingFactory extends Factory
     {
         return [
             'name' => $this->faker->company(),
-            'price' => $this->faker->numberBetween(10, 2000)
+            'price' => $this->faker->numberBetween(20, 999)
         ];
     }
 }

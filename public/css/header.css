@@ -6,6 +6,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header__logo {
@@ -39,7 +40,24 @@
   color: var(--primary-color);
 }
 
+.header__burger {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: none;
+}
+
+.header__burger svg {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
 @media screen and (max-width: 900px) {
+  .header__burger {
+    display: block;
+  }
+
   .header {
     padding-right: 20px;
     padding-left: 20px;
@@ -55,5 +73,18 @@
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 100%;
+    display: none;
+  }
+  .header__buttons {
+    display: none;
+    width: 100%;
+  }
+
+  .header.is-open .header__nav {
+    display: block;
+  }
+  .header.is-open .header__buttons {
+    display: block;
   }
 }

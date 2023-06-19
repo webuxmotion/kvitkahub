@@ -12,3 +12,12 @@ if (deleteButton) {
     }
   });
 }
+
+const burgerButton = document.querySelector('.js-burger');
+const header = document.querySelector('.js-header');
+
+if (burgerButton) {
+  burgerButton.addEventListener('click', () => {
+    header.classList.toggle('is-open');
+  });
+}

@@ -42,11 +42,18 @@
 }
 
 @media screen and (max-width: 900px) {
-  .hero__content {
-    flex-direction: column;
+  .hero {
+    padding: 20px;
   }
-
-  .hero__img:first-child {
+  .hero__inner {
+    padding: 10px;
+  }
+  .hero__content {
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero__img {
     display: none;
   }
 }

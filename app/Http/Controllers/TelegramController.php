@@ -24,7 +24,13 @@ class TelegramController extends Controller {
         'chat_id' => $chatId, 
         'photo' => new InputFile($photo_url),
         'caption' => $caption
-    ]);
-    } catch (\Exception $e) {}
+      ]);
+    } catch (\Exception $e) {
+      $telegram->sendPhoto([
+        'chat_id' => $chatId, 
+        'photo' => new InputFile(public_path('/images/flower-1.png')),
+        'caption' => $caption
+      ]);
+    }
   }
 }

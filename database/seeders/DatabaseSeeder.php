@@ -19,20 +19,27 @@ class DatabaseSeeder extends Seeder
     {
         $user = User::factory()->create([
             'name' => 'Andrii Pereverziev',
-            'email' => 'pereverziev.test@gmail.com'
+            'email' => 'first@gmail.com',
+            'password' => bcrypt('test')
         ]);
         $user2 = User::factory()->create([
             'name' => 'Andrii Pereverziev',
-            'email' => 'test@gmail.com'
+            'email' => 'second@gmail.com',
+            'password' => bcrypt('test')
         ]);
 
-        Listing::factory(3)->create([
-            'user_id' => $user->id
-        ]);
-
-        Listing::factory(3)->create([
-            'user_id' => $user2->id
-        ]);
+        foreach ([1, 2, 3] as $num) {
+            Listing::factory()->create([
+                'user_id' => $user->id,
+                'image' => "../../images/product-$num.png"
+            ]);
+        }
+        foreach ([4, 5, 6] as $num) {
+            Listing::factory()->create([
+                'user_id' => $user2->id,
+                'image' => "../../images/product-$num.png"
+            ]);
+        }
 
         Place::factory()->create([
             'user_id' => $user->id,

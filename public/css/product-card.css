@@ -1,11 +1,17 @@
 .product-card {
-
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card__footer {
   border: 1px solid var(--border-color-light);
   border-top: none;
   padding: 25px 17px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card__image {
@@ -28,4 +34,19 @@
 
 .product-card__price span {
   font-size: 24px;
+}
+
+@media screen and (max-width: 900px) {
+  .product-card__footer {
+    padding: 10px;
+  }
+
+  .product-card__title {
+    font-size: 20px;
+  }
+
+  .product-card__price {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
 }
